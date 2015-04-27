@@ -18,7 +18,7 @@
 Gem::Specification.new do |spec|
   spec.name	= "yast-rake-ci"
   spec.version = File.read(File.expand_path("../VERSION", __FILE__)).chomp
-  spec.summary = "Rake tasks extendind the yast-rake functionality"
+  spec.summary = "Rake tasks extending the yast-rake functionality"
   spec.license = "LGPL v2.1"
 
   spec.author	= "Ladislav Slezak"
@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
 This Rake tasks extend the functionality of yast-rake tasks to easily run
 the tests and checks in Jenkins builds.
 
-The reason for a separage gem is are the huge dependedncies which require
+The reason for a separage gem is are the huge dependencies which require
 installing many other gems. And because they are not needed in all cases it
 is a good idea to move them to a separate gem.
   EOT

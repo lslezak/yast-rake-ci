@@ -18,6 +18,8 @@
 #++
 
 require "yast/rake"
+# load the local tasks
+require_relative "lib/yast/rake_ci"
 
 # remove tarball implementation and create gem for this gemfile
 Rake::Task[:tarball].clear
@@ -46,7 +48,7 @@ namespace :version do
   task :bump do
     # update VERSION
     version_parts = File.read("VERSION").strip.split(".")
-    version_parts[-1] = (version_parts.last.to_i + 1).to_s
+    version_parts[-1] = version_parts.last.to_i + 1
     new_version = version_parts.join(".")
 
     puts "Updating to #{new_version}"
@@ -63,6 +65,3 @@ end
 Yast::Tasks.configuration do |conf|
   conf.package_name = "rubygem-yast-rake-ci"
 end
-
-# load the local tasks
-require_relative "lib/yast/rake_ci"

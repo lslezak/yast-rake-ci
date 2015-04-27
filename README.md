@@ -14,7 +14,7 @@ This package provides extensions for the [YaST Rake tasks](https://github.com/ya
 These tasks are needed only during development and in Jenkins build, this package
 in not needed at run-time or in OBS for building the YaST packages.
 
-The package is used to install all needed packages via RPM dependencies.
+The package installs all needed packages via RPM dependencies.
 
 Provided Tasks
 --------------
