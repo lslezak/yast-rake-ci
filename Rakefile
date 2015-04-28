@@ -23,6 +23,9 @@ begin
   # load the local tasks
   require_relative "lib/yast/rake_ci"
 rescue LoadError
+  # when building the RPM package at Jenkins the required gems might be missing
+  # at the create tarball step (they are installed later into the OSC chroot),
+  # do not fail in that case
   $stderr.puts "Warning: Loading rake:ci task failed, skipping the task"
 end
 
