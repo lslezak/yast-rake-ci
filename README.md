@@ -11,7 +11,12 @@ Description
 
 This package provides extensions for the [YaST Rake tasks](https://github.com/yast/yast-rake).
 
-These tasks are needed only during development and in Jenkins build, this package
+The purpose of the package is to collect the package dependencies and the code
+needed for running extra checks in the Jenkins CI. The code will be shared
+across all YaST packages to make the maintenance easy with a single point
+for changes.
+
+The provided tasks are needed only during development and in Jenkins build, this package
 in not needed at run-time or in OBS for building the YaST packages.
 
 The package installs all needed packages via RPM dependencies.
