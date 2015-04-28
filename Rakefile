@@ -18,8 +18,13 @@
 #++
 
 require "yast/rake"
-# load the local tasks
-require_relative "lib/yast/rake_ci"
+
+begin
+  # load the local tasks
+  require_relative "lib/yast/rake_ci"
+rescue LoadError
+  $stderr.puts "Warning: Loading rake:ci task failed, skipping the task"
+end
 
 # remove tarball implementation and create gem for this gemfile
 Rake::Task[:tarball].clear
