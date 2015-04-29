@@ -68,6 +68,9 @@ Usually in RDoc and RI formats.
 %install
 %gem_install -f
 
+%check
+(pushd %{buildroot}%{gem_base}/gems/%{mod_full_name} && rake check:ci)
+
 %files
 %defattr(-,root,root,-)
 %{gem_base}/cache/%{mod_full_name}.gem
