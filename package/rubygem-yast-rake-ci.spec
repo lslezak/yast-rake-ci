@@ -17,7 +17,7 @@
 
 
 Name:           rubygem-yast-rake-ci
-Version:        0.0.1
+Version:        0.0.2
 Release:        0
 %define mod_name yast-rake-ci
 %define mod_full_name %{mod_name}-%{version}
@@ -28,6 +28,12 @@ Requires:       aspell-en
 # the rubocop shared config
 BuildRequires:  yast2-devtools
 Requires:       yast2-devtools
+# the SSL certificates are needed for sending the code coverage
+# results to https://coveralls.io
+Requires:  ca-certificates-mozilla
+# coveralls tries reading some data from Git, make sure it is installed
+# to avoid an error
+Requires:  git
 # for the tests
 BuildRequires:  rubygem(gettext)
 BuildRequires:  rubygem(raspell)
