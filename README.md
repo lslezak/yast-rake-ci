@@ -3,7 +3,6 @@ YaST CI Tasks
 =============
 
 [![Build Status](http://ci.opensuse.org/buildStatus/icon?job=yast-rake-ci-master)](http://ci.opensuse.org/view/Yast/job/yast-rake-ci-master/)
-[![Code Climate](https://codeclimate.com/github/yast/yast-yast-rake-ci/badges/gpa.svg)](https://codeclimate.com/github/yast/yast-rake-ci)
 
 
 Description
