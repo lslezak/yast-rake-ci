@@ -68,7 +68,7 @@ is a good idea to move them to a separate gem.
 
 # MANUAL
 %check
-(pushd %{buildroot}%{gem_base}/gems/%{mod_full_name} && rake --verbose --trace check:ci)
+(cd %{buildroot}%{gem_base}/gems/%{mod_full_name} && rake --verbose --trace check:ci)
 #/ MANUAL
 
 %gem_packages
