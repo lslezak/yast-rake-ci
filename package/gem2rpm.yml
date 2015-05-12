@@ -18,15 +18,13 @@
 :preamble: |-
   # extra dependencies (not specified in gemspec)
   BuildRequires: aspell-en
-  Requires:      aspell-en
   # the rubocop shared config
   BuildRequires: yast2-devtools
-  Requires:      yast2-devtools
   # for the tests
-  BuildRequires: rubygem(yast-rake)
-  BuildRequires: rubygem(rubocop) = 0.29.1
-  BuildRequires: rubygem(gettext)
-  BuildRequires: rubygem(raspell)
+  BuildRequires: %{rubygem yast-rake}
+  BuildRequires: %{rubygem rubocop = 0.29.1}
+  BuildRequires: %{rubygem gettext}
+  BuildRequires: %{rubygem raspell}
 # ## used by gem2rpm
 # :patches:
 #   foo.patch: -p1
@@ -47,7 +45,7 @@
 #   install -D -m 0644 %{S:1} %{buildroot}%{_bindir}/gem2rpm-opensuse
 # ## used by gem2rpm
 :testsuite_command: |-
-   (pushd %{buildroot}%{gem_base}/gems/%{mod_full_name} && rake check:ci)
+   (pushd %{buildroot}%{gem_base}/gems/%{mod_full_name} && rake --verbose --trace check:ci)
 # ## used by gem2rpm
 # :filelist: |-
 #   /usr/bin/gem2rpm-opensuse
@@ -56,10 +54,10 @@
 #   :post: |-
 #     /bin/echo foo
 # ## used by gem_packages
-# :main:
-#   :preamble: |-
-#     Requires: util-linux
-#     Recommends: pwgen
+:main:
+  :preamble: |-
+    Requires:      aspell-en
+    Requires:      yast2-devtools
 #   :filelist: |-
 #     /usr/bin/gem2rpm-opensuse
 # ## used by gem_packages
