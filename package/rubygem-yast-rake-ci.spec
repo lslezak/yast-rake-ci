@@ -1,7 +1,7 @@
 #
 # spec file for package rubygem-yast-rake-ci
 #
-# Copyright (c) 2015 SUSE LINUX GmbH, Nuernberg, Germany.
+# Copyright (c) 2016 SUSE LINUX GmbH, Nuernberg, Germany.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -34,20 +34,20 @@ BuildRequires:  aspell-en
 # the rubocop shared config
 BuildRequires:  yast2-devtools
 # for the tests
-BuildRequires:  %{rubygem gettext}
-BuildRequires:  %{rubygem raspell}
-BuildRequires:  %{rubygem rubocop = 0.29.1}
-BuildRequires:  %{rubygem yast-rake}
+BuildRequires:  rubygem(yast-rake)
+BuildRequires:  rubygem(rubocop) = 0.29.1
+BuildRequires:  rubygem(gettext)
+BuildRequires:  rubygem(raspell)
 # /MANUAL
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-BuildRequires:  %{rubygem gem2rpm}
-BuildRequires:  %{ruby}
 BuildRequires:  ruby-macros >= 5
+BuildRequires:  %{ruby}
+BuildRequires:  %{rubygem gem2rpm}
 Url:            http://github.org/yast/yast-rake-ci
 Source:         http://rubygems.org/gems/%{mod_full_name}.gem
 Source1:        gem2rpm.yml
 Summary:        Rake tasks extending the yast-rake functionality
-License:        LGPL-2.1
+License:        LGPL v2.1
 Group:          Development/Languages/Ruby
 
 %description
