@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.name	= "yast-rake-ci"
   spec.version = File.read(File.expand_path("../VERSION", __FILE__)).chomp
   spec.summary = "Rake tasks extending the yast-rake functionality"
-  spec.license = "LGPL v2.1"
+  spec.license = "LGPL-2.1"
 
   spec.author	= "Ladislav Slezak"
   spec.email	= "lslezak@suse.cz"

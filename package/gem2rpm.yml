@@ -17,14 +17,14 @@
 # ## used by gem2rpm
 :preamble: |-
   # extra dependencies (not specified in gemspec)
-  BuildRequires: aspell-en
+  BuildRequires:  aspell-en
   # the rubocop shared config
-  BuildRequires: yast2-devtools
+  BuildRequires:  yast2-devtools
   # for the tests
-  BuildRequires: %{rubygem yast-rake}
-  BuildRequires: %{rubygem rubocop = 0.29.1}
-  BuildRequires: %{rubygem gettext}
-  BuildRequires: %{rubygem raspell}
+  BuildRequires:  rubygem(yast-rake)
+  BuildRequires:  rubygem(rubocop) = 0.29.1
+  BuildRequires:  rubygem(gettext)
+  BuildRequires:  rubygem(raspell)
 # ## used by gem2rpm
 # :patches:
 #   foo.patch: -p1
