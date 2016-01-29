@@ -47,7 +47,7 @@ Url:            http://github.org/yast/yast-rake-ci
 Source:         http://rubygems.org/gems/%{mod_full_name}.gem
 Source1:        gem2rpm.yml
 Summary:        Rake tasks extending the yast-rake functionality
-License:        LGPL v2.1
+License:        LGPL-2.1
 Group:          Development/Languages/Ruby
 
 %description
