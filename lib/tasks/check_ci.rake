@@ -30,7 +30,9 @@ else
   code_check = :"check:syntax"
 end
 
-dependencies = [:"test:unit", code_check, :"check:spelling", :"check:pot"]
+dependencies = [:"test:unit", code_check, :"check:pot"]
+
+dependencies << :"check:spelling" if File.exist?(".spell.yml")
 
 # run yardoc if .yardopts is present
 if File.exist?(".yardopts")
