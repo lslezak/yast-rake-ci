@@ -66,11 +66,6 @@ is a good idea to move them to a separate gem.
   --no-rdoc --no-ri \
   -f
 
-# MANUAL
-%check
-(cd %{buildroot}%{gem_base}/gems/%{mod_full_name} && rake --verbose --trace check:ci)
-#/ MANUAL
-
 %gem_packages
 
 %changelog
