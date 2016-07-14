@@ -35,7 +35,7 @@ end
 Rake::Task[:tarball].clear
 # build the gem package
 desc "Build gem package, save RPM sources to package subdirectory"
-task :"tarball" do
+task :tarball do
   version = File.read("VERSION").chomp
   Dir["package/*.tar.bz2"].each { |f| rm f }
   Dir["package/*.gem"].each { |g| rm g }

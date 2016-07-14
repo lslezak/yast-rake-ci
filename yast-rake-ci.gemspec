@@ -35,7 +35,7 @@ is a good idea to move them to a separate gem.
   EOT
 
   # gem content
-  spec.files   = Dir["lib/tasks/*.rake", "lib/yast/*.rb", "COPYING", "VERSION",
+  spec.files = Dir["lib/tasks/*.rake", "lib/yast/*.rb", "COPYING", "VERSION",
     "Rakefile", ".rubocop.yml"]
 
   # define LOAD_PATH
