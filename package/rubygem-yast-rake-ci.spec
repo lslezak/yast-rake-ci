@@ -24,7 +24,7 @@
 #
 
 Name:           rubygem-yast-rake-ci
-Version:        0.0.3
+Version:        0.1.0
 Release:        0
 %define mod_name yast-rake-ci
 %define mod_full_name %{mod_name}-%{version}
