@@ -50,7 +50,7 @@ is a good idea to move them to a separate gem.
   spec.add_dependency("gettext")
   spec.add_dependency("raspell")
   # freeze the rubocop version
-  spec.add_dependency("rubocop", "0.29.1")
+  spec.add_dependency("rubocop", "0.41.2")
   spec.add_dependency("simplecov")
   spec.add_dependency("yard")
 end

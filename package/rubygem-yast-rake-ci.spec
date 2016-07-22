@@ -35,7 +35,7 @@ BuildRequires:  aspell-en
 BuildRequires:  yast2-devtools
 # for the tests
 BuildRequires:  rubygem(yast-rake)
-BuildRequires:  rubygem(rubocop) = 0.29.1
+BuildRequires:  rubygem(rubocop) = 0.41.2
 BuildRequires:  rubygem(gettext)
 BuildRequires:  rubygem(raspell)
 # /MANUAL

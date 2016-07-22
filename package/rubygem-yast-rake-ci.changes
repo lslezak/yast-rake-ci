@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Jul 22 10:47:27 UTC 2016 - lslezak@suse.cz
+
+- Update the Rubocop version to 0.41.2
+- 0.1.0
+
+-------------------------------------------------------------------
 Fri Feb 26 12:41:00 UTC 2016 - lslezak@suse.cz
 
 - run the spell check task only when ".spell.yml" file is present
