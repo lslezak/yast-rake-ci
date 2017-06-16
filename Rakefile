@@ -19,6 +19,8 @@
 
 require "yast/rake"
 
+Yast::Tasks.submit_to :sle12sp3
+
 begin
   # load the local tasks
   require_relative "lib/yast/rake_ci"
