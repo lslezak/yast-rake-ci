@@ -24,7 +24,7 @@
 #
 
 Name:           rubygem-yast-rake-ci
-Version:        0.1.0
+Version:        0.1.1
 Release:        0
 %define mod_name yast-rake-ci
 %define mod_full_name %{mod_name}-%{version}
@@ -34,15 +34,15 @@ BuildRequires:  aspell-en
 # the rubocop shared config
 BuildRequires:  yast2-devtools
 # for the tests
-BuildRequires:  rubygem(yast-rake)
-BuildRequires:  rubygem(rubocop) = 0.41.2
-BuildRequires:  rubygem(gettext)
-BuildRequires:  rubygem(raspell)
+BuildRequires:  rubygem(%{rb_default_ruby_abi}:yast-rake)
+BuildRequires:  rubygem(%{rb_default_ruby_abi}:rubocop) = 0.41.2
+BuildRequires:  rubygem(%{rb_default_ruby_abi}:gettext)
+BuildRequires:  rubygem(%{rb_default_ruby_abi}:raspell)
 # /MANUAL
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildRequires:  ruby-macros >= 5
 BuildRequires:  %{ruby}
-BuildRequires:  %{rubygem gem2rpm}
+BuildRequires:  rubygem(%{rb_default_ruby_abi}:gem2rpm)
 Url:            http://github.org/yast/yast-rake-ci
 Source:         http://rubygems.org/gems/%{mod_full_name}.gem
 Source1:        gem2rpm.yml
